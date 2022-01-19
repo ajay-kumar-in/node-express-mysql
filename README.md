@@ -1,5 +1,10 @@
 # node-express-mysql
 
+<<<<<<< HEAD
+=======
+# node-express-mysql
+
+>>>>>>> 8d614975d60bed8581070fc3911599ab30a3f510
 # Apis List-
 
 ## Create User
@@ -55,4 +60,7 @@
 
 ## Delete product by id
 ### GET - http://localhost:3000/api/product/<productId>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d614975d60bed8581070fc3911599ab30a3f510
