@@ -9,6 +9,7 @@ const AppError = require('../utils/appError')
 
 const addProduct = async (req, res) => {
     // console.log(chalk.yellow.inverse('reqqqqqqqqqq'), req.body, req.file);
+    if(!req.file) return res.status(500).send({ message: 'please uploade image.' });
     const imgFileName = req.file.filename;
     const { name, description, originalPrice, discount, category, status } = req.body;
     const product = {
