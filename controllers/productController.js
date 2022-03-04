@@ -25,6 +25,7 @@ const addProduct = async (req, res) => {
 }
 
 const getProducts = async (req, res, next) => {
+    if(!req.query.size || !req.query.page) return res.status(500).send({message: 'page number and page size are required !'})
     let pageSize = +req.query.size;
     if(pageSize > 100) {
         pageSize = 100; 
