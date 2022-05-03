@@ -24,11 +24,11 @@ const createUser = async (req, res, next) => {
 
     try {
         const createdUser = await userModel.create(user);
-        sendWelcomeEmail(req.body.email, req.body.firstName);
+        // sendWelcomeEmail(req.body.email, req.body.firstName);
 
         res.status(201).send({ createdUser: createdUser, message: 'user created successfully' });
     } catch {
-        res.status(404).send({ message: 'User already registered !' })
+        res.status(500).send({ message: 'User already registered !' })
     }
 }
 
