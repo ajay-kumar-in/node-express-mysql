@@ -1,8 +1,17 @@
 # node-express-mysql
 
+# .env file details
+HOST='localhost'
+USER='root'
+PASSWORD=''
+DATABASE='your db name'
+PORT='your port number'
+JWT_PRIVATE_KEY='your secret key'
+SENDGRID_API_KEY='your sendgrid key'
+
 # Apis List-
 
-## Create User
+## Create User / Signup
 ### POST - http://localhost:3000/api/signup
 {
     "firstName": "first name",
@@ -48,10 +57,10 @@
 }
 
 ## Get products list (size=<number of items, max 100 per page>, page=<page number>)
-### GET - http://localhost:3000/api/products?size=3&page=3
+### GET - http://localhost:3000/api/products?size=3&page=1
 
 ## Get product by id
 ### GET - http://localhost:3000/api/product/<productId>
 
 ## Delete product by id
-### GET - http://localhost:3000/api/product/<productId>
+### DELETE - http://localhost:3000/api/product/<productId>
